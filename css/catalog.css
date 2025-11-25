@@ -1,0 +1,220 @@
+.category-page-container {
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+.breadcrumb {
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.breadcrumb i {
+    font-size: 10px;
+    margin: 0 10px;
+    color: #999;
+}
+
+.catalog-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.filter-sidebar {
+    flex: 0 0 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.filter-group {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-group:last-child {
+    border-bottom: none;
+}
+
+.filter-group h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--primary-dark);
+    text-transform: uppercase;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.filter-group input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: var(--primary);
+}
+
+.size-box-label input {
+    display: none;
+}
+
+.size-box-label span {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #fff;
+}
+
+.size-box-label input:checked + span {
+    background-color: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.size-box-label:hover span {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.size-box-label input:checked:hover + span {
+    color: #fff;
+}
+
+.btn-clear-filters {
+    appearance: none;
+    -webkit-appearance: none;
+    background: none;
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-clear-filters:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(211, 0, 0, 0.2);
+}
+
+.btn-clear-filters i {
+    font-size: 14px;
+}
+
+.catalog-content {
+    flex: 1;
+}
+
+.catalog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.catalog-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+.sort-box select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-left: 10px;
+    color: #555;
+}
+
+.products-grid-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.catalog-card {
+    flex: 0 0 calc(33.333% - 14px) !important;
+    max-width: calc(33.333% - 14px) !important;
+    margin-bottom: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.page-btn.active, .page-btn:hover {
+    background-color: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+@media (min-width: 1200px) {
+    .catalog-card {
+        flex: 0 0 calc(25% - 15px) !important;
+        max-width: calc(25% - 15px) !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .catalog-layout { flex-direction: column; }
+    .filter-sidebar { width: 100%; margin-bottom: 30px; }
+    .catalog-card {
+        flex: 0 0 calc(50% - 10px) !important;
+        max-width: calc(50% - 10px) !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .catalog-card {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}
